@@ -1,38 +1,45 @@
 #include <iostream>
 
-int main(){
+int main() {
     float num1, num2;
-    char operacao;
+    char opcao;
+
     
-    printf("Digite o primeiro número: ");
+    printf("Insira o primeiro número: ");
     scanf("%f", &num1);
 
-    printf("Digite o segundo número: ");
+    printf("Insira o segundo número: ");
     scanf("%f", &num2);
 
-    printf("Insira a operação (+, -, *, /): ");
-    scanf("%c", &operacao);
-    
-    switch(operacao){
+    printf("Insira a operação matemática (+, -, *, /): ");
+    scanf(" %c", &opcao);
+
+    float resultado;
+    switch (opcao) {
         case '+':
-            printf("Resultado: %.2f\n", num1 + num2);
+            resultado = num1 + num2;
             break;
         case '-':
-            printf("Resultado: %.2f\n", num1 - num2);
-             break;
+            resultado = num1 - num2;
+            break;
         case '*':
-            printf("Resultado: %.2f\n", num1 * num2);
+            resultado = num1 * num2;
             break;
         case '/':
-            if (num2 != 0){
-                printf("Resultado: %.2f\n", num1 / num2);
-            }   else {
-                printf("Não é possivel dividir por zero.\n");
+            if (num2 != 0) {
+                resultado = num1 / num2;
+            } else {
+                printf("Erro: divisão por zero!\n");
+                return 1; 
             }
-             break;
-             default:
-                printf("Opercação inválida.\n");
+            break;
+        default:
+            printf("Operação inválida!\n");
+            return 1; 
     }
 
-    return 0;
+    
+    printf("Resultado: %.2f\n", resultado);
+
+    return 0; 
 }
