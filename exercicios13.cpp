@@ -17,7 +17,19 @@ int main(){
     printf("Digite a presença do aluno: ");
     scanf("%f", &presenca);
 
-    if (nota_aluno == 5.0){
-        
-    }
+    if (nota_aluno == 5.0)
+        nota_recuperacao = 5.0;
+
+        else if (nota_aluno == 6.0)
+        nota_recuperacao = 4.0;
+
+    float nota_final =  nota_aluno + (10 - nota_aluno);
+     
+     if (nota_final >= 10.0 && presenca >= 75.0) {
+        printf("Aprovado.\n");
+     } else {
+        printf("Reprovado.\n");
+     }
+
+     return 0;
 }
