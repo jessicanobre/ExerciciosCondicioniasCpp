@@ -23,6 +23,10 @@ int main(){
     } else if(presenca >= 75 && media >= 7){
         printf("Aprovado!.\n");
     } else if(presenca >= 75 && media >=5){
-        printf("Recu")
+        printf("Recuperação!,\n");
+    } else {
+        printf("Reprovado!");
     }
+
+    return 0;
 }
